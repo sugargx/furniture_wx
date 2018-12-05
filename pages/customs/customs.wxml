@@ -1,0 +1,32 @@
+<view class="page">
+  <view class='item' wx:for="{{customer}}">
+    <view class='header'>
+      <image src='../../images/touxiang.png' class='touxiang'></image>
+      <view class='name'>{{item.name}}</view>
+      <view class='word'>
+        <image src='../../images/time1.png'></image>
+        安装时间：{{item.time}}
+      </view>
+    </view>
+    <view class='content'>
+      <view class='title'>
+        <image src='../../images/address1.png'></image>
+        地址：{{item.address}}
+      </view>
+      <!-- <block wx:for="{{images}}">
+        <view class='picture'>
+          <image src='{{item}}' mode='widthFix'></image>
+        </view>
+      </block> -->
+      <!-- 幻灯片显示 -->
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{item.images}}">
+          <swiper-item>
+            <image src="{{url}}/{{item.image}}" class="slide-image" style='width:80%; height:375rpx;margin:10rpx auto;display:block'  bindtap='previewImage'/>
+          </swiper-item>
+        </block>
+      </swiper>
+
+    </view>
+  </view>
+  </view>

@@ -1,0 +1,165 @@
+<!-- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button> -->
+<scroll-view scroll-y='true' scroll-with-animation='true' scroll-top='{{ topNum }}'>
+  <view class='first' wx:if="{{condition}}">
+    <!-- 背景图片 -->
+    <image src='../../images/bm_bg.jpg' mode='scaleTofill' class='background'></image>
+    <view class='content'>
+      <view class='first_info'>
+        <text class='one'><text style='display:block;height:60rpx;'>淄博</text>全屋定制工厂店网上抢单\n直省50%以上</text>
+        <view class='two'>{{month}} 月网上抢单数
+          <span>{{all_num}}</span>
+        </view>
+        <view class='three'>今天仅剩
+          <span>{{remain_num}}</span> 个名额</view>
+      </view>
+      <form bindsubmit="formSubmit" report-submit="true">      
+      <!-- <form report-submit="true"> -->
+        <view class='biaodan'>
+          <view class="weui-cells weui-cells_after-title single">
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd">
+                <input name="name" class="weui-input" placeholder="姓名" type='text' value='{{clear}}' placeholder='您的姓名？' />
+              </view>
+            </view>
+          </view>
+          <view class="weui-cells weui-cells_after-title single">
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd">
+                <input name="phone" class="weui-input" placeholder="手机号" type='number' value='{{clear}}' placeholder='您的电话？' />
+              </view>
+            </view>
+          </view>
+
+          <!-- 下拉框 -->
+          <view class='select_box'>
+            <view class='select' catchtap='selectTap'>
+              <text class='select_text'>区域：{{selectData[index]['area']}}</text>
+              <image class='select_img {{show&&"select_img_rotate"}}' src='../../images/down.png'></image>
+            </view>
+            <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+              <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item.area}}</text>
+            </view>
+          </view>
+          <view class='chengnuo' style='font-size:40rpx'>只收材料进价+加工费+安装成本费</view>
+          <!-- 授权登录的按钮放在这里了 -->
+          <!-- <button wx:if="{{shouquanButton}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style='width:80%;margin-top:5px'>授权登录</button> -->
+          <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="weui-btn" form-type='submit' plain='true'>
+            <image src='../../images/3.png' mode='widthFix'></image>
+          </button>
+        </view>
+      </form>
+    </view>
+  </view>
+  <view class='first' wx:if="{{!condition}}">
+    <!-- 背景图片 -->
+    <image src='../../images/bm_bg.jpg' mode='scaleTofill' class='background'></image>
+    <view class='content' style='padding-top:90rpx;'>
+      <view class='first_info'>
+        <view>感谢您对全屋定制工厂店的关注与支持！</view>
+        <view style='font-size:40rpx;margin:20rpx;'>本月网上抢单活动已经完成，我们将在
+          <span>次月1日</span>发布下月抢单数量！</view>
+        <view style='font-size:45rpx;margin:20rpx;'>详情咨询电话:
+          <span>{{noactive_telephone}}</span>
+        </view>
+        <view style='font-size:50rpx;'>我们将第一时间通知您抢单！</view>
+        <!-- 授权登录的按钮放在这里了 -->
+        <!-- <button wx:if="{{shouquanButton}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style='width:80%;margin-top:5rpx; margin-bottom: 10rpx;'>授权登录</button> -->
+      </view>
+    </view>
+  </view>
+  <view class='fanwei'>
+    <view class='big_title'>业务范围</view>
+    <view class='title'>
+      <image src='../../images/fanwei1.png'></image>
+      卧房
+    </view>
+    <view class='content1'>
+      <text>衣柜 衣帽间 飘窗组合 电视柜组合</text>
+      <image src='../../images/fanwei11.jpg'></image>
+    </view>
+     <view class='title'>
+      <image src='../../images/fanwei2.png'></image>
+      多功能房
+    </view>
+    <view class='content1'>
+      <text>书房 榻榻米 书柜组合 转角书桌</text>
+      <image src='../../images/fanwei22.jpg'></image>
+    </view>
+    <view class='title'>
+      <image src='../../images/fanwei3.png'></image>
+      青少年房
+    </view>
+    <view class='content1'>
+      <text>榻榻米 书柜 书桌组合</text>
+      <image src='../../images/fanwei33.jpg'></image>
+    </view>
+   <view class='title'>
+      <image src='../../images/fanwei4.png'></image>
+      客餐厅
+    </view>
+    <view class='content1'>
+      <text>隔断柜组合 电视柜组合 餐柜组合</text>
+      <image src='../../images/fanwei44.jpg'></image>
+    </view>
+    <view class='title'>
+      <image src='../../images/fanwei5.png'></image>
+      厨房
+    </view>
+    <view class='content1'>
+      <text>一字型橱柜 L型橱柜 U型橱柜</text>
+      <image src='../../images/fanwei55.jpg'></image>
+    </view>
+  </view>
+  <view class='second'>
+    <image src='../../images/12.png' class='background'></image>
+    <view class='content'>
+      <view class='title'>抢单理由</view>
+      <view class='more'>
+        <text>空闲时生产，单数有限</text>
+        <text>材料品种全，进价加工</text>
+        <text>安装市场价，自选人员</text>
+        <text>无店面成本，货真价实</text>
+        <text>无营销费用，网上抢单</text>
+      </view>
+      <view class='admit'>真正将性价比做到极致！</view>
+      <button class='weui-btn' bindtap='goTop'>立即报名</button>
+    </view>
+  </view>
+  <view class='third'>
+    <view class='title'>
+      <image src='../../images/cailiao.png'></image>
+      板材种类
+    </view>
+    <view class='content1'>
+      <text>生态板</text>
+      <image src='../../images/type1.jpg'></image>
+      <text>实木颗粒板</text>
+      <image src='../../images/type2.jpg'></image>
+      <text>多层板</text>
+      <image src='../../images/type3.jpg'></image>
+      <text>定向结构板</text>
+      <image src='../../images/type4.jpg'></image>
+      <text class='admit'>全部为品牌，环保达标板材</text>
+    </view>
+    <view class='title'>
+      <image src='../../images/shebei.png'></image>
+      全新设备
+    </view>
+    <view class='content2'>
+      <text>数控下料机</text>
+      <image src='../../images/type5.jpg'></image>
+      <text>数控封边机</text>
+      <image src='../../images/type6.jpg'></image>
+      <text>数控打孔机</text>
+      <image src='../../images/type7.jpg'></image>
+      <text class='admit'>全部设备与一线品牌使用同款同品牌设备</text>
+    </view>
+    <button class='weui-btn' bindtap='goTop'>立即报名</button>
+    <view class='telephone' bindtap='call'>
+      电话：{{telephone}}</view>
+    <view class='noactive_telephone' bindtap='call'>
+      {{noactive_telephone}}
+    </view>
+  </view>
+  <image class='haibao' src='../../images/haibao.png' bindtap="bindCanvas" hidden="{{hidden}}"></image>
+</scroll-view>

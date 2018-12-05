@@ -1,0 +1,74 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.1",
+	"appid": "wx3f4540ab3c572028",
+	"projectname": "furniture",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": -1,
+					"name": "客户实例",
+					"pathName": "pages/customs/customs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "联系我们",
+					"pathName": "pages/contactus/contactus",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "单人",
+					"pathName": "pages/index/index",
+					"query": "id=1&type=1",
+					"scene": "1007"
+				},
+				{
+					"id": 3,
+					"name": "二维码",
+					"pathName": "pages/canvas/canvas",
+					"query": "id=4",
+					"scene": "1007"
+				},
+				{
+					"id": 4,
+					"name": "单人",
+					"pathName": "pages/index/index",
+					"query": "id=10&type=1",
+					"scene": "1007"
+				}
+			]
+		}
+	}
+}

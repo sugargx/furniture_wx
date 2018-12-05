@@ -1,0 +1,14 @@
+<view class='factory_show'>
+  <!-- <view class='title'>工厂展示</view> -->
+  <image src='../../images/factory_show.png' class='showtitle'></image>
+  <view class='big'>
+    <view class='picture'>
+      <block wx:for="{{factoryimages}}">
+        <view class='item'>
+          <image src="{{url}}/{{item.image}}" bindtap='previewImage' mode='widthFix'></image>
+        </view>
+      </block>
+    </view>
+  </view>
+
+</view>

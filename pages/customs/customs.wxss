@@ -1,0 +1,49 @@
+/* page为根元素 */
+page{
+
+}
+.item{
+  /* height: 450rpx; */
+  background-color: white;
+}
+.item .header{
+   margin-top: 10rpx; 
+}
+.item .header .touxiang{
+  float: left;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+   margin-top: 20rpx; 
+}
+.item .header .name{
+  padding-top: 20rpx;
+}
+.item .header .word{
+  font-size: 35rpx;
+  color: #888; 
+}
+.item .content .title{
+  margin-top: 20rpx;
+  margin-left: 150rpx;
+}
+.item .content .picture{
+  margin-left: 150rpx;
+  /* text-align: center; */
+}
+.item .content .picture image{
+  width: 80%;
+  height: auto;
+  display: block;
+  margin-top: 20rpx
+}
+.word image{
+  width: 45rpx!important;
+  height: 45rpx!important;
+}
+.title image{
+  width: 45rpx!important;
+  height: 45rpx!important;
+}

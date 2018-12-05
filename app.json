@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/customs/customs",
+    "pages/contactus/contactus",
+    "pages/factory_show/factory_show",
+    "pages/canvas/canvas"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "全屋定制工厂店",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "本月抢单",
+        "iconPath": "images/index-dark.png",
+        "selectedIconPath": "images/index.png"
+      },
+      {
+        "pagePath": "pages/customs/customs",
+        "text": "客户实例",
+        "iconPath": "images/customer-dark.png",
+        "selectedIconPath": "images/customer.png"
+      },
+      {
+        "pagePath": "pages/contactus/contactus",
+        "text": "联系我们",
+        "iconPath": "images/contact-dark.png",
+        "selectedIconPath": "images/contact.png"
+      }
+    ]
+  }
+}

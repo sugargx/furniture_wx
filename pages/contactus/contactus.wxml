@@ -1,0 +1,42 @@
+<view class='factory_show'>
+  <!-- <view class='title'>工厂展示</view> -->
+  <image src='../../images/factory_show.png' class='showtitle'></image>
+  <view class='big'>
+    <!-- <view class='picture'>
+      <block wx:for="{{factoryimages}}">
+        <view class='item'>
+          <image src="{{item}}" bindtap='previewImage'></image>
+        </view>
+      </block>
+    </view> -->
+      <!-- 幻灯片显示 -->
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:500rpx;'>
+        <block wx:for="{{factory}}">
+          <swiper-item>
+            <image src="{{url}}/{{item.image}}" class="slide-image" style='width:90%;margin:10rpx auto;display:block'  bindtap='moreGoto' data-id='{{item.id}}'/>
+            <view class='imgcontent'>{{item.name}}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+
+</view>
+<view class='factory_address'>
+  <!-- <view class='title'>工厂地址</view> -->
+  <image src='../../images/factory_address.png' class='addresstitle'></image>
+  <map id="myMap" style="width: 90%; height: 500rpx;margin:10rpx auto" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" show-location></map>
+</view>
+<view class='telephone'>
+  <view class='part'>
+    <image src='../../images/address1.png' style='width:50rpx; height:50rpx;'></image>
+   <span style="margin-top:10rpx;">工厂地址：山东省淄博市张店区傅家镇向阳村西500米</span>
+  </view>
+  <view class='part'>
+    <image src='../../images/tele_icon.png' style='width:50rpx; height:50rpx;'></image>
+   <span style="margin-top:16rpx;" bindtap="call_zixun">咨询电话：{{telephone}}</span>
+  </view>
+  <view class='part'>
+    <image src='../../images/tele_icon.png' style='width:50rpx; height:50rpx;'></image>
+    <span style="margin-top:16rpx;" bindtap="call_qiangdan">抢单监督电话：{{watch_telephone}}</span>
+  </view>
+</view>

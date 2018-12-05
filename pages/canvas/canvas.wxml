@@ -1,0 +1,7 @@
+<view>
+    <canvas style="width:100%;height:{{contentHeight + 10}}px" canvas-id="myCanvas"></canvas>
+    <view class="edit-footer">
+        <image id="image_qr" src="{{filePath}}" hidden="true"></image>
+        <button class="button-done" type="primary" bindtap="savePic">保存图片</button>
+    </view>
+</view>
